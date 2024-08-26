@@ -1,49 +1,29 @@
-const { Model, DataTypes } = require('sequelize');
-
-class Endereco extends Model {}
-
-Endereco.init({
-    Id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-    },
-    Cep: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    Logradouro: {   
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    Numero: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    Complemento: {
-        type: DataTypes.STRING,
-    },
-    Bairro: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    Cidade: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    Estado: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    MunicipioIBGE: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-}, {
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Endereco extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+    }
+  }
+  Endereco.init({
+    cep: DataTypes.STRING,
+    logradouro: DataTypes.STRING,
+    numero: DataTypes.INTEGER,
+    complemento: DataTypes.STRING,
+    bairro: DataTypes.STRING,
+    cidade: DataTypes.STRING,
+    estado: DataTypes.STRING,
+    municipioIBGE: DataTypes.STRING
+  }, {
     sequelize,
     modelName: 'Endereco',
-    tableName: 'enderecos',
-    timestamps: true,
-});
-
-module.exports = Endereco;
+  });
+  return Endereco;
+};
