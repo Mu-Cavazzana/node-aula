@@ -5,10 +5,10 @@ Codigo fonte da api, já implementado para identificar e notificar quando o inpu
 
 ### Verificador de CEP:
 
-![Alt text](https://ctrl.vi/i/6Ec2AJY9f)
+![image](https://github.com/user-attachments/assets/f37e2070-c1c9-4cd2-8b8d-522e8b59e08a)
 
-https://ctrl.vi/i/6Ec2AJY9f
 
 ### Registro no Postgres:
 
-![Alt text](https://ctrl.vi/i/LmfO2DQHo)
+![image](https://github.com/user-attachments/assets/6989f7c5-fcab-4645-bbc4-863ca2997b02)
+
